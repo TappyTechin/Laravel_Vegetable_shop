@@ -51,4 +51,14 @@ class CartController extends Controller
         }
         return back()->with('error', 'Checkout failed');
     }
+
+    public function viewcheckout(){
+        $carts = Cart::join('products', 'carts.p_id', '=', 'products.id')
+        ->where('carts.u_id', Auth::id())
+        ->where('carts.c_status', 'checkout')
+        ->select('carts.*', 'products.p_name', 'products.p_price')
+        ->get();
+
+    return view('viewcheckout', compact('carts'));
+    }
 }

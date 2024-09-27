@@ -38,6 +38,7 @@
             @endif
         </tbody>
     </table>
+    <a href="/viewcheckout">View Previous Checkout</a>
     <a href="/cartlist">View Cartlist</a>
     <a href="/login">Logout</a>
 </div>

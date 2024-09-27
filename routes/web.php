@@ -31,3 +31,4 @@ Route::get("/add_to_cart/(id)", [cartController::class,"add_to_cart"])->name("ad
 Route::post('/add_to_cart/{id}', [cartController::class, 'add_to_cart'])->name('add_to_cart');
 Route::get("/cartlist",[cartcontroller::class,"cart_list"]);
 Route::put("/checkout",[cartController::class,"checkout"])->name("checkout");
+Route::get("/viewcheckout",[cartController::class,"viewcheckout"]);
